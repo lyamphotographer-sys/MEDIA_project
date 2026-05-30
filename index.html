@@ -63,7 +63,7 @@
             color: #000000;
         }
 
-        /* Hero Section với Nền Video Sáng sủa */
+        /* Hero Section */
         .hero {
             position: relative;
             min-height: 90vh;
@@ -87,7 +87,7 @@
             object-fit: cover;
             z-index: 1;
             pointer-events: none;
-            opacity: 0.15; /* Giảm độ mờ để nền sáng rõ chữ */
+            opacity: 0.15;
         }
 
         .hero-overlay {
@@ -175,7 +175,7 @@
             margin-bottom: 40px;
         }
 
-        /* Portfolio Carousel Nền Sáng */
+        /* Portfolio Carousel */
         .portfolio-carousel-wrapper {
             position: relative;
             width: 100%;
@@ -241,7 +241,7 @@
             font-weight: 500;
         }
 
-        /* Nút Cuộn Slide Điều Hướng Mới */
+        /* Nút Cuộn Slide Điều Hướng */
         .carousel-nav-btn {
             position: absolute;
             top: 50%;
@@ -272,7 +272,7 @@
         .carousel-nav-btn.prev { left: -27px; }
         .carousel-nav-btn.next { right: -27px; }
 
-        /* Hậu Trường Thực Tế BTS Nền Sáng */
+        /* Hậu Trường Thực Tế BTS */
         .bts-container {
             background: #ffffff;
             border-radius: 32px;
@@ -319,7 +319,7 @@
             color: #ffffff;
         }
 
-        /* Bảng giá dịch vụ Card Khối Sáng Cao Cấp */
+        /* Bảng Giá Gói Dịch Vụ */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -374,10 +374,10 @@
         .price-value {
             font-size: 1.8rem;
             font-weight: 900;
-            color: #4f46e5; /* Màu xanh nghệ thuật làm điểm nhấn giá tiền */
+            color: #4f46e5;
         }
 
-        /* Form Đăng Ký Sáng sủa */
+        /* Form Đăng Ký Tư Vấn */
         .register-container {
             background: #ffffff;
             border: 1px solid rgba(0, 0, 0, 0.04);
@@ -438,7 +438,7 @@
             background-color: #1f2937;
         }
 
-        /* Cửa sổ Zalo Nổi */
+        /* Nút Cửa Sổ Zalo Nổi */
         .zalo-float-btn {
             position: fixed;
             bottom: 35px;
@@ -536,7 +536,7 @@
 
     <section class="section" id="portfolio">
         <h2 class="section-title">Sản Phẩm Đã Thực Hiện</h2>
-        <p class="section-subtitle">Bấm nút mũi tên hai bên để lướt qua các dự án video dọc chất lượng cao của chúng tôi.</p>
+        <p class="section-subtitle">Bấm nút mũi tên hai bên để lướt qua các dự án video dọc ngắn chất lượng cao.</p>
         
         <div class="portfolio-carousel-wrapper">
             <div class="carousel-nav-btn prev" onclick="scrollCarousel(-340)">&lt;</div>
@@ -697,23 +697,23 @@
             <h2 class="section-title" style="font-size: 2.2rem; margin-bottom: 10px;">Khởi Động Chiến Dịch Thôi!</h2>
             <p class="section-subtitle" style="margin-bottom: 40px;">Để lại thông tin dự án, Mê Đi A Project sẽ liên hệ tư vấn lộ trình nội dung video ngắn hoàn toàn miễn phí.</p>
             
-            <form onsubmit="alert('Đã nhận thông tin đăng ký! Mê Đi A Project sẽ liên hệ với bạn trong vòng 2 giờ làm việc.'); return false;">
+            <form action="https://formspree.io/f/mjgzdvng" method="POST">
                 <div class="form-group">
                     <label>Họ và tên của bạn / Đại diện doanh nghiệp *</label>
-                    <input type="text" placeholder="Ví dụ: Nguyễn Văn A" required>
+                    <input type="text" name="name" placeholder="Ví dụ: Nguyễn Văn A" required>
                 </div>
                 <div class="form-group">
                     <label>Số điện thoại / Zalo liên hệ *</label>
-                    <input type="tel" placeholder="Ví dụ: 0971981302" required>
+                    <input type="tel" name="phone" placeholder="Ví dụ: 0971981302" required>
                 </div>
                 <div class="form-group">
                     <label>Gói giải pháp bạn đang quan tâm</label>
-                    <select>
-                        <option>Xây Kênh Trọn Gói (499k/video)</option>
-                        <option>Quay Dựng Lẻ (699k/video)</option>
-                        <option>Edit Video Chuyên Nghiệp (249k-399k/video)</option>
-                        <option>Gói Quay Freelance (499k-999k)</option>
-                        <option>Biên Kịch Kịch Bản (98k-198k)</option>
+                    <select name="service">
+                        <option value="Xây Kênh Trọn Gói">Xây Kênh Trọn Gói (499k/video)</option>
+                        <option value="Quay Dựng Lẻ">Quay Dựng Lẻ (699k/video)</option>
+                        <option value="Edit Video Chuyên Nghiệp">Edit Video Chuyên Nghiệp (249k-399k/video)</option>
+                        <option value="Gói Quay Freelance">Gói Quay Freelance (499k-999k)</option>
+                        <option value="Biên Kịch Kịch Bản">Biên Kịch Kịch Bản (98k-198k)</option>
                     </select>
                 </div>
                 <button type="submit" class="form-submit-btn">Gửi Yêu Cầu Tư Vấn</button>
